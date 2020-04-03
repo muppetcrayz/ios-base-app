@@ -13,6 +13,7 @@
 		08A50BB124376CF700318672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A50BB024376CF700318672 /* Assets.xcassets */; };
 		08A50BB424376CF700318672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A50BB224376CF700318672 /* LaunchScreen.storyboard */; };
 		08A50BBC24376DDD00318672 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A50BBB24376DDD00318672 /* Extensions.swift */; };
+		56D2B030CDA4EBE59B539F27 /* Pods_Easy_Pay_Cash_Approval.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8039487441817181E93372E /* Pods_Easy_Pay_Cash_Approval.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		08A50BB324376CF700318672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08A50BB524376CF700318672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A50BBB24376DDD00318672 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4B9FDB0586A3F8B2E81281B5 /* Pods-Easy Pay Cash Approval.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Pay Cash Approval.debug.xcconfig"; path = "Target Support Files/Pods-Easy Pay Cash Approval/Pods-Easy Pay Cash Approval.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB9018A7A140E3266F94068 /* Pods-Easy Pay Cash Approval.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Pay Cash Approval.release.xcconfig"; path = "Target Support Files/Pods-Easy Pay Cash Approval/Pods-Easy Pay Cash Approval.release.xcconfig"; sourceTree = "<group>"; };
+		F8039487441817181E93372E /* Pods_Easy_Pay_Cash_Approval.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easy_Pay_Cash_Approval.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D2B030CDA4EBE59B539F27 /* Pods_Easy_Pay_Cash_Approval.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				08A50BA624376CF400318672 /* Easy Pay Cash Approval */,
 				08A50BA524376CF400318672 /* Products */,
+				E0713B7CCB4E7D6BF1E86455 /* Pods */,
+				31DFBF56E9C642A7289D7942 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Easy Pay Cash Approval";
 			sourceTree = "<group>";
 		};
+		31DFBF56E9C642A7289D7942 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8039487441817181E93372E /* Pods_Easy_Pay_Cash_Approval.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0713B7CCB4E7D6BF1E86455 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B9FDB0586A3F8B2E81281B5 /* Pods-Easy Pay Cash Approval.debug.xcconfig */,
+				CDB9018A7A140E3266F94068 /* Pods-Easy Pay Cash Approval.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08A50BB824376CF700318672 /* Build configuration list for PBXNativeTarget "Easy Pay Cash Approval" */;
 			buildPhases = (
+				8E0F04C35B9B457A7E6FF685 /* [CP] Check Pods Manifest.lock */,
 				08A50BA024376CF400318672 /* Sources */,
 				08A50BA124376CF400318672 /* Frameworks */,
 				08A50BA224376CF400318672 /* Resources */,
+				DA6DDA51650C43ABE8F6CCDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E0F04C35B9B457A7E6FF685 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easy Pay Cash Approval-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA6DDA51650C43ABE8F6CCDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Pay Cash Approval/Pods-Easy Pay Cash Approval-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Pay Cash Approval/Pods-Easy Pay Cash Approval-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easy Pay Cash Approval/Pods-Easy Pay Cash Approval-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08A50BA024376CF400318672 /* Sources */ = {
@@ -274,6 +343,7 @@
 		};
 		08A50BB924376CF700318672 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9FDB0586A3F8B2E81281B5 /* Pods-Easy Pay Cash Approval.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +362,7 @@
 		};
 		08A50BBA24376CF700318672 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB9018A7A140E3266F94068 /* Pods-Easy Pay Cash Approval.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
